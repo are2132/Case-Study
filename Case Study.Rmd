@@ -5,3 +5,22 @@ date: "10/8/2019"
 output: html_document
 ---
 
+```{r}
+library(tidyverse)
+library(ggridges)
+library(p8105.datasets)
+
+data(nyc_airbnb)  #load in Airbnb data
+```
+
+```{r}
+str(nyc_airbnb) #check variable types
+
+nyc_airbnb %>%
+  count(room_type)
+
+nyc_airbnb %>%
+  count(neighbourhood_group)
+
+```
+
